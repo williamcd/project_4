@@ -11,7 +11,7 @@ class ShopCard extends Component {
         return (
             <div>
                 <h1>{this.state.shop.name}</h1>
-                <h1>{this.state.shop.description}</h1>
+                <p>{this.state.shop.description}</p>
                 <img src={this.state.shop.photo_url} />
             </div>
         );

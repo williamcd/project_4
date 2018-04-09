@@ -14,7 +14,18 @@ class ShopForm extends Component {
     render() {
         return (
             <div>
-                new shop form
+                <form onSubmit={this.props.createShop}>
+                    <input onChange={this.props.handleChange} 
+                            placeholder="name" type="text" 
+                            name="name" value={this.props.newShop.name} />
+                    <input onChange={this.props.handleChange}
+                            placeholder="description" type="text"
+                            name="description" value={this.props.newShop.description} />
+                    <input onChange={this.props.handleChange}
+                            placeholder="photo_url" type="text"
+                            name="photo_url" value={this.props.newShop.photo_url} />
+                    <button>save</button>
+                </form>
             </div>
         );
     }
