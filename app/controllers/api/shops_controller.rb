@@ -19,6 +19,10 @@ class Api::ShopsController < ApplicationController
         }
     end
     def create
+        @new_shop = Shop.create(shop_params)
+        render json: {
+            shop: @new_shop
+        }
     end
     def destroy
         Shop.find(params[:id]).destroy
