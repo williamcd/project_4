@@ -30,8 +30,6 @@ class ShopView extends Component {
         const response = await axios.get(`/api/shops/${shopId}`)
         this.setState({ shop: response.data.shop })
         this.setState({ items: response.data.items })
-        console.log(this.state.shop)
-        console.log(this.state.items)
     }
     toggleEditForm = () => {
         this.setState({ editForm: !this.state.editForm })

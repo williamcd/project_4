@@ -33,7 +33,6 @@ class ShopList extends Component {
     getAllShops = async () => {
         const response = await axios.get('/api/shops')
         this.setState({ shops: response.data.shops })
-        console.log(this.state)
     }
     render() {
         return (
