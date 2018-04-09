@@ -16,12 +16,15 @@ class ShopEditForm extends Component {
                     <input onChange={this.props.handleChange} 
                             placeholder="name" type="text" 
                             name="name" value={this.props.shop.name} />
+                    <br />
                     <input onChange={this.props.handleChange}
                             placeholder="description" type="text"
                             name="description" value={this.props.shop.description} />
+                    <br />
                     <input onChange={this.props.handleChange}
                             placeholder="photo_url" type="text"
                             name="photo_url" value={this.props.shop.photo_url} />
+                    <br />
                     <button>save</button>
                 </form>
             </div>

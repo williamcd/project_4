@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class ShopConfirm extends Component {
+class Footer extends Component {
     render() {
         return (
             <div>
-                shop delete confirm
+                <h3>footer</h3>
             </div>
         );
     }
 }
 
-export default ShopConfirm;
+export default Footer;

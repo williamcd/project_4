@@ -46,11 +46,11 @@ class ShopView extends Component {
             <div>
                 <button onClick={this.toggleEditForm}>edit shop</button>
                 <button onClick={this.toggleDeleteConfirm}>delete shop</button>
+                {this.state.editForm ? <ShopEditForm handleChange={this.handleChange} saveShop={this.saveShop} shop={this.state.shop} /> : null}
+                {this.state.deleteConfirm ? <ShopDeleteConfirm deleteShop={this.deleteShop} cancel={this.toggleDeleteConfirm} /> : null}
                 <h1>{this.state.shop.name}</h1>
                 <p>{this.state.shop.description}</p>
                 <img src={this.state.shop.photo_url} />
-                {this.state.editForm ? <ShopEditForm handleChange={this.handleChange} saveShop={this.saveShop} shop={this.state.shop} /> : null}
-                {this.state.deleteConfirm ? <ShopDeleteConfirm deleteShop={this.deleteShop} cancel={this.toggleDeleteConfirm} /> : null}
             </div>
         );
     }
