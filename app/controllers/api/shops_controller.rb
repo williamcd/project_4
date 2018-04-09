@@ -7,8 +7,10 @@ class Api::ShopsController < ApplicationController
     end
     def show
         @shop = Shop.find(params[:id])
+        @items = @shop.items
         render json: {
-            shop: @shop
+            shop: @shop,
+            items: @items
         }
     end
     def update
