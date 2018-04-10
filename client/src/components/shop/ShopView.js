@@ -8,6 +8,7 @@ class ShopView extends Component {
     state = {
         shop: {},
         items: [],
+        properties: [],
         editForm: false,
         deleteConfirm: false
     }
@@ -26,6 +27,7 @@ class ShopView extends Component {
     }
     deleteShop = async () => {
         await axios.delete(`/api/shops/${this.state.shop.id}`)
+        this.props.history.push(`/shops`)
     }
     getShop = async (event) => {
         const shopId = this.props.match.params.id

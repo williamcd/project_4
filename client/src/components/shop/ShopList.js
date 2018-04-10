@@ -40,9 +40,9 @@ class ShopList extends Component {
             <div>
                 <button onClick={this.toggleShopForm}>new shop</button>
                 {this.state.showShopForm ? <ShopForm handleChange={this.handleChange} createShop={this.createShop} newShop={this.state.newShop} /> : null}
-                {this.state.shops.map((shop) => {
+                {this.state.shops.map((shop, i) => {
                     return (
-                        <ShopCard shop={shop} />
+                        <ShopCard key={i} shop={shop} />
                     )
                 })}
             </div>
