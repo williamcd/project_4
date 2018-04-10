@@ -37,6 +37,6 @@ class Api::ItemsController < ApplicationController
     private
 
     def item_params
-        params.require(:item).permit(:name, :description, :att, :spec, :def, :cost)
+        params.require(:item).permit(:name, :cost, :category)
     end
 end

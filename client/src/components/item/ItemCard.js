@@ -1,20 +1,24 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 class ItemCard extends Component {
-    state= {
-        item: {}
-    }
-    componentDidMount() {
-        this.setState({ item: this.props.item })
+    deleteItem = async () => {
+        const response = await axios.delete(`/api/shops/${this.props.shopId}/items/${this.props.item.id}`)
+        this.props.refreshItems()
     }
     render() {
         return (
             <div>
                 <Link to="#">
-                    <h1>{this.state.item.name}</h1>
+                    <h1>{this.props.item.name}</h1>
                 </Link>
-                <p>{this.state.item.description}</p>
+                <p>
+                    Cost: {this.props.item.cost}
+                    <br />
+                    Category: {this.props.item.category}
+                </p>
+                <button onClick={this.deleteItem}>delete {this.props.item.name}</button>
             </div>
         );
     }

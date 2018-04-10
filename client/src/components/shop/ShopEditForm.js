@@ -27,6 +27,7 @@ class ShopEditForm extends Component {
                     <br />
                     <button>save</button>
                 </form>
+                <button onClick={this.props.cancel}>cancel</button>
             </div>
             </div>
         );
