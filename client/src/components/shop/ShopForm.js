@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class ShopForm extends Component {
     state = {
@@ -31,4 +31,4 @@ class ShopForm extends Component {
     }
 }
 
-export default ShopForm;
+export default ShopForm

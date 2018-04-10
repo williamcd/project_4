@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import axios from 'axios'
 import ShopCard from './ShopCard'
 import ShopForm from './ShopForm'
+import styled from 'styled-components'
 
 class ShopList extends Component {
     state = {
@@ -26,7 +27,7 @@ class ShopList extends Component {
     }
     createShop = async (event) => {
         event.preventDefault()
-        const response = await axios.post(`/api/shops`, this.state.newShop)
+        await axios.post(`/api/shops`, this.state.newShop)
         this.setState({ newShop: { name: '', description: '', photo_url: '' } })
         this.getAllShops()
     }
@@ -49,4 +50,4 @@ class ShopList extends Component {
     }
 }
 
-export default ShopList;
+export default ShopList

@@ -38,3 +38,4 @@ ActiveRecord::Schema.define(version: 20180409181947) do
 
   add_foreign_key "items", "shops"
 end
+# item: name, cost, weight, damage_type

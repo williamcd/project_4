@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ShopList from './components/shop/ShopList'
 import ShopView from './components/shop/ShopView'
@@ -23,4 +23,4 @@ class App extends Component {
     }
   }
   
-  export default App;
+  export default App

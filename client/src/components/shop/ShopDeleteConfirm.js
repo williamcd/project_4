@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class ShopDeleteConfirm extends Component {
     render() {
@@ -11,4 +11,4 @@ class ShopDeleteConfirm extends Component {
     }
 }
 
-export default ShopDeleteConfirm;
+export default ShopDeleteConfirm

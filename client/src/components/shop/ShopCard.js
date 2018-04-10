@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import React, { Component } from 'react'
+import { Link } from "react-router-dom"
 
 class ShopCard extends Component {
     state = {
@@ -21,4 +21,4 @@ class ShopCard extends Component {
     }
 }
 
-export default ShopCard;
+export default ShopCard

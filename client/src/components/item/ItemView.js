@@ -1,6 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class ItemView extends Component {
+    state = {
+        item: {}
+    }
+    componentDidMount() {
+        this.setState({ item: this.props.item })
+    }
     render() {
         return (
             <div>
@@ -10,4 +16,4 @@ class ItemView extends Component {
     }
 }
 
-export default ItemView;
+export default ItemView
