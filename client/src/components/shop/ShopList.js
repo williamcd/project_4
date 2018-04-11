@@ -30,6 +30,7 @@ class ShopList extends Component {
         await axios.post(`/api/shops`, this.state.newShop)
         this.setState({ newShop: { name: '', description: '', photo_url: '' } })
         this.getAllShops()
+        this.toggleShopForm()
     }
     getAllShops = async () => {
         const response = await axios.get('/api/shops')
@@ -38,16 +39,31 @@ class ShopList extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.toggleShopForm}>new shop</button>
-                {this.state.showShopForm ? <ShopForm handleChange={this.handleChange} createShop={this.createShop} newShop={this.state.newShop} /> : null}
-                {this.state.shops.map((shop, i) => {
-                    return (
-                        <ShopCard key={i} shop={shop} />
-                    )
-                })}
+                <ListDiv>
+                    {this.state.shops.map((shop, i) => {
+                        return (
+                            <ShopCard key={i} shop={shop} />
+                        )
+                    })}
+                </ListDiv>
+                {this.state.showShopForm
+                    ?
+                    <div>
+                        <ShopForm cancel={this.toggleShopForm} handleChange={this.handleChange} createShop={this.createShop} newShop={this.state.newShop} />
+                    </div>
+                    :
+                    <button onClick={this.toggleShopForm}>new shop</button>}
+
             </div>
         );
     }
 }
 
 export default ShopList
+
+const ListDiv = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+`

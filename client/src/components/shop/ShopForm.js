@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
 
 class ShopForm extends Component {
     state = {
@@ -13,7 +14,7 @@ class ShopForm extends Component {
     }
     render() {
         return (
-            <div>
+            <FormStyle>
                 <form onSubmit={this.props.createShop}>
                     <input onChange={this.props.handleChange} 
                             placeholder="name" type="text" 
@@ -24,11 +25,25 @@ class ShopForm extends Component {
                     <input onChange={this.props.handleChange}
                             placeholder="photo_url" type="text"
                             name="photo_url" value={this.props.newShop.photo_url} />
-                    <button>save</button>
+                    <button>save</button><button onClick={this.props.cancel} >cancel</button>
                 </form>
-            </div>
+            </FormStyle>
         );
     }
 }
 
 export default ShopForm
+
+const FormStyle = styled.div`
+    width: 600px;
+    height: 500px;
+    text-align: center;
+    font-family: Cinzel;
+    text-decoration: none;
+    margin: 50px;
+    border: 1px solid black;
+    font-size: 25px;
+    img {
+        height: 50%;
+    }
+`
