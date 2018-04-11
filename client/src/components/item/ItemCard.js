@@ -18,7 +18,7 @@ class ItemCard extends Component {
                     <br />
                     Category: {this.props.item.category}
                 </p>
-                <button onClick={this.deleteItem}>delete {this.props.item.name}</button>
+                <button onClick={this.deleteItem}>X</button>
             </div>
         );
     }

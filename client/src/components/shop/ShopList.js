@@ -53,7 +53,6 @@ class ShopList extends Component {
                     </div>
                     :
                     <button onClick={this.toggleShopForm}>new shop</button>}
-
             </div>
         );
     }

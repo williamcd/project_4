@@ -16,15 +16,18 @@ class ShopForm extends Component {
         return (
             <FormStyle>
                 <form onSubmit={this.props.createShop}>
-                    <input onChange={this.props.handleChange} 
+                    <InputStyle onChange={this.props.handleChange} 
                             placeholder="name" type="text" 
                             name="name" value={this.props.newShop.name} />
-                    <input onChange={this.props.handleChange}
-                            placeholder="description" type="text"
-                            name="description" value={this.props.newShop.description} />
-                    <input onChange={this.props.handleChange}
+                    <br />
+                    <InputStyle onChange={this.props.handleChange}
                             placeholder="photo_url" type="text"
                             name="photo_url" value={this.props.newShop.photo_url} />
+                    <br />
+                    <InputStyle onChange={this.props.handleChange}
+                            placeholder="description" type="text"
+                            name="description" value={this.props.newShop.description} />
+                    <br />
                     <button>save</button><button onClick={this.props.cancel} >cancel</button>
                 </form>
             </FormStyle>
@@ -46,4 +49,9 @@ const FormStyle = styled.div`
     img {
         height: 50%;
     }
+`
+const InputStyle = styled.input`
+    width: 500px;
+    height: 60px;
+    font-size: 25px;
 `

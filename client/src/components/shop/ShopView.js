@@ -47,16 +47,28 @@ class ShopView extends Component {
         this.setState({ editForm: false })
         this.getShop()
     }
+    getNewItem = async () => {
+        const rand = 1 + Math.random() * (38 - 1)
+        const response = await axios.get(`http://www.dnd5eapi.co/api/equipment/${rand}`)
+        const name = response.data.name
+        const cost = response.data.cost.quantity
+        const category = response.data.weapon_range
+        const payload = {name: name, cost: cost, category: category}
+        const res = await axios.post(`/api/shops/${this.state.shop.id}/items`, payload)
+        this.getShop()
+    }
     render() {
         return (
             <div>
+                <h1>{this.state.shop.name}</h1>
+                <p>{this.state.shop.description}</p>
+                <img src={this.state.shop.photo_url} />
+                <br />
+                <button onClick={this.getNewItem}>new item</button>
                 <button onClick={this.toggleEditForm}>edit shop</button>
                 <button onClick={this.toggleDeleteConfirm}>delete shop</button>
                 {this.state.editForm ? <ShopEditForm handleChange={this.handleChange} saveShop={this.saveShop} shop={this.state.shop} cancel={this.cancelEdit} /> : null}
                 {this.state.deleteConfirm ? <ShopDeleteConfirm deleteShop={this.deleteShop} cancel={this.toggleDeleteConfirm} /> : null}
-                <h1>{this.state.shop.name}</h1>
-                <p>{this.state.shop.description}</p>
-                <img src={this.state.shop.photo_url} />
                 <ItemList shopId={this.props.match.params.id} getShop={this.getShop} refreshItems={this.getShop} shopId={this.props.match.params.id} items={this.state.items} getNewItem={this.getNewItem} />
             </div>
         );
