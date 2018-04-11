@@ -49,7 +49,8 @@ class ShopView extends Component {
     }
     getNewItem = async () => {
         const rand = 1 + Math.random() * (38 - 1)
-        const response = await axios.get(`http://www.dnd5eapi.co/api/equipment/${rand}`)
+        const num = Math.ceil(rand)
+        const response = await axios.get(`http://www.dnd5eapi.co/api/equipment/${num}`)
         const name = response.data.name
         const cost = response.data.cost.quantity
         const category = response.data.weapon_range

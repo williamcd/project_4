@@ -34,8 +34,9 @@ const CardStyle = styled.div`
     border: 1px solid black;
     font-size: 25px;
     img {
-        width: 90%;
         margin-bottom: -20px;
+        height: 304px;
+        width: 540px;
     }
     a {
         text-decoration: none;
