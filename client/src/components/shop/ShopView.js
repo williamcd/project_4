@@ -47,16 +47,6 @@ class ShopView extends Component {
         this.setState({ editForm: false })
         this.getShop()
     }
-    getNewItem = async () => {
-        const rand = 1 + Math.random() * (38 - 1)
-        const response = await axios.get(`http://www.dnd5eapi.co/api/equipment/${rand}`)
-        const name = response.data.name
-        const cost = response.data.cost.quantity
-        const category = response.data.weapon_range
-        const payload = {name: name, cost: cost, category: category}
-        const res = await axios.post(`/api/shops/${this.props.match.params.id}/items`, payload)
-        this.getShop()
-    }
     render() {
         return (
             <div>
@@ -67,7 +57,7 @@ class ShopView extends Component {
                 <h1>{this.state.shop.name}</h1>
                 <p>{this.state.shop.description}</p>
                 <img src={this.state.shop.photo_url} />
-                <ItemList refreshItems={this.getShop} shopId={this.props.match.params.id} items={this.state.items} getNewItem={this.getNewItem} />
+                <ItemList shopId={this.props.match.params.id} getShop={this.getShop} refreshItems={this.getShop} shopId={this.props.match.params.id} items={this.state.items} getNewItem={this.getNewItem} />
             </div>
         );
     }

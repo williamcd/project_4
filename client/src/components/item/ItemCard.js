@@ -4,7 +4,7 @@ import axios from 'axios'
 
 class ItemCard extends Component {
     deleteItem = async () => {
-        const response = await axios.delete(`/api/shops/${this.props.shopId}/items/${this.props.item.id}`)
+        await axios.delete(`/api/shops/${this.props.shopId}/items/${this.props.item.id}`)
         this.props.refreshItems()
     }
     render() {
