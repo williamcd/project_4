@@ -30,7 +30,7 @@ class ShopEditForm extends Component {
                 <button onClick={this.props.cancel}>cancel</button>
             </div>
             </div>
-        );
+        )
     }
 }
 

@@ -10,28 +10,28 @@ class ShopForm extends Component {
         }
     }
     componentDidMount() {
-        this.setState({ shop: this.props.newShop})
+        this.setState({ shop: this.props.newShop })
     }
     render() {
         return (
             <FormStyle>
                 <form onSubmit={this.props.createShop}>
-                    <InputStyle onChange={this.props.handleChange} 
-                            placeholder="name" type="text" 
-                            name="name" value={this.props.newShop.name} />
+                    <InputStyle onChange={this.props.handleChange}
+                        placeholder="name" type="text"
+                        name="name" value={this.props.newShop.name} />
                     <br />
                     <InputStyle onChange={this.props.handleChange}
-                            placeholder="photo_url" type="text"
-                            name="photo_url" value={this.props.newShop.photo_url} />
+                        placeholder="photo_url" type="text"
+                        name="photo_url" value={this.props.newShop.photo_url} />
                     <br />
                     <InputStyle onChange={this.props.handleChange}
-                            placeholder="description" type="text"
-                            name="description" value={this.props.newShop.description} />
+                        placeholder="description" type="text"
+                        name="description" value={this.props.newShop.description} />
                     <br />
                     <button>save</button><button onClick={this.props.cancel} >cancel</button>
                 </form>
             </FormStyle>
-        );
+        )
     }
 }
 

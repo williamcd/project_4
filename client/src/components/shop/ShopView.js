@@ -54,7 +54,7 @@ class ShopView extends Component {
         const name = response.data.name
         const cost = response.data.cost.quantity
         const category = response.data.weapon_range
-        const payload = {name: name, cost: cost, category: category}
+        const payload = { name: name, cost: cost, category: category }
         const res = await axios.post(`/api/shops/${this.state.shop.id}/items`, payload)
         this.getShop()
     }
@@ -72,7 +72,7 @@ class ShopView extends Component {
                 {this.state.deleteConfirm ? <ShopDeleteConfirm deleteShop={this.deleteShop} cancel={this.toggleDeleteConfirm} /> : null}
                 <ItemList shopId={this.props.match.params.id} getShop={this.getShop} refreshItems={this.getShop} shopId={this.props.match.params.id} items={this.state.items} getNewItem={this.getNewItem} />
             </div>
-        );
+        )
     }
 }
 

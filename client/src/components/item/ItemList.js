@@ -5,16 +5,6 @@ import axios from 'axios'
 import styled from 'styled-components'
 
 class ItemList extends Component {
-    // getNewItem = async () => {
-    //     const rand = 1 + Math.random() * (38 - 1)
-    //     const response = await axios.get(`http://www.dnd5eapi.co/api/equipment/${rand}`)
-    //     const name = response.data.name
-    //     const cost = response.data.cost.quantity
-    //     const category = response.data.weapon_range
-    //     const payload = {name: name, cost: cost, category: category}
-    //     const res = await axios.post(`/api/shops/${this.props.shopId}/items`, payload)
-    //     this.props.getShop()
-    // }
     render() {
         return (
             <ListStyle>
@@ -24,7 +14,7 @@ class ItemList extends Component {
                     )
                 })}
             </ListStyle>
-        );
+        )
     }
 }
 

@@ -12,7 +12,7 @@ class ItemView extends Component {
             <div>
                 Item View
             </div>
-        );
+        )
     }
 }
 

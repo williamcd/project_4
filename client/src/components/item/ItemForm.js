@@ -6,7 +6,7 @@ class ItemForm extends Component {
             <div>
                 New Item Form
             </div>
-        );
+        )
     }
 }
 

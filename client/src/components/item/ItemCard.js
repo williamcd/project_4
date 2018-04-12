@@ -22,7 +22,7 @@ class ItemCard extends Component {
                     Category: {this.props.item.category}
                 </p>
             </ItemStyle>
-        );
+        )
     }
 }
 

@@ -18,7 +18,7 @@ class ShopCard extends Component {
                 </Link>
                 <p>{this.state.shop.description}</p>
             </CardStyle>
-        );
+        )
     }
 }
 
