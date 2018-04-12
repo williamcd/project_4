@@ -29,8 +29,8 @@ class ItemCard extends Component {
 export default ItemCard
 
 const ItemStyle = styled.div`
-    height: 200px;
-    width: 300px;
+    height: 225px;
+    width: 225px;
     border: 1px solid black;
     margin: 5px;
     padding: 10px;
