@@ -54,7 +54,9 @@ class ShopView extends Component {
         const name = response.data.name
         const cost = response.data.cost.quantity
         const category = response.data.weapon_range
-        const payload = { name: name, cost: cost, category: category }
+        const description_url = response.data.properties
+        const payload = { name: name, cost: cost, category: category, description_url: description_url }
+        console.log(payload)
         const res = await axios.post(`/api/shops/${this.state.shop.id}/items`, payload)
         this.getShop()
     }

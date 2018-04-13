@@ -8,18 +8,21 @@ class ItemCard extends Component {
         await axios.delete(`/api/shops/${this.props.shopId}/items/${this.props.item.id}`)
         this.props.refreshItems()
     }
+    componentDidMount() {
+        console.log(this.props.item.description_url)
+    }
     render() {
         return (
             <ItemStyle>
                 <Link to="#">
                     <h1>{this.props.item.name}</h1>
                 </Link>
-
                 <ButtonStyle onClick={this.deleteItem}>X</ButtonStyle>
                 <p>
                     Cost: {this.props.item.cost}
                     <br />
                     Category: {this.props.item.category}
+                    <br />
                 </p>
             </ItemStyle>
         )
