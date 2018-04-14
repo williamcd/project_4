@@ -71,8 +71,7 @@ class ShopView extends Component {
                             <p>{this.state.shop.description}</p>
                             <img src={this.state.shop.photo_url} />
                             <br />
-                        </div>
-                }
+                        </div> }
                 <button onClick={this.getNewItem}>new item</button>
                 <button onClick={this.toggleEditForm}>edit shop</button>
                 <button onClick={this.toggleDeleteConfirm}>delete shop</button>

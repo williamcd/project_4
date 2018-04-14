@@ -48,11 +48,9 @@ class ShopList extends Component {
                 </ListDiv>
                 {this.state.showShopForm
                     ?
-                    <div>
-                        <ShopForm cancel={this.toggleShopForm} handleChange={this.handleChange} createShop={this.createShop} newShop={this.state.newShop} />
-                    </div>
+                    <ShopForm cancel={this.toggleShopForm} handleChange={this.handleChange} createShop={this.createShop} newShop={this.state.newShop} />
                     :
-                    <button onClick={this.toggleShopForm}>new shop</button>}
+                    <button onClick={this.toggleShopForm}>new shop</button> }
             </div>
         )
     }
@@ -64,5 +62,5 @@ const ListDiv = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 `

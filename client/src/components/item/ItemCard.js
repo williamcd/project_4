@@ -8,14 +8,11 @@ class ItemCard extends Component {
         await axios.delete(`/api/shops/${this.props.shopId}/items/${this.props.item.id}`)
         this.props.refreshItems()
     }
-    componentDidMount() {
-        console.log(this.props.item)
-    }
     render() {
         return (
             <ItemStyle>
                 <Link to="#">
-                    <h1>{this.props.item.name}</h1>
+                    <h3>{this.props.item.name}</h3>
                 </Link>
                 <ButtonStyle onClick={this.deleteItem}>X</ButtonStyle>
                 <p>
@@ -32,11 +29,11 @@ class ItemCard extends Component {
 export default ItemCard
 
 const ItemStyle = styled.div`
-    height: 225px;
-    width: 225px;
+    height: 150px;
+    width: 150px;
     border: 1px solid black;
     margin: 5px 10px;
-    padding: 10px;
+    padding: 15px;
 `
 const ButtonStyle = styled.button`
     padding: 2px;
