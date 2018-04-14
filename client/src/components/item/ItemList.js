@@ -10,7 +10,7 @@ class ItemList extends Component {
             <ListStyle>
                 {this.props.items.map((item, i) => {
                     return (
-                        <ItemCard refreshItems={this.props.refreshItems} shopId={this.props.shopId} key={i} item={item} />
+                        <ItemCard getShop={this.props.getShop} shopId={this.props.shopId} key={i} item={item} />
                     )
                 })}
             </ListStyle>
