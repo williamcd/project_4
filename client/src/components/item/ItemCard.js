@@ -9,7 +9,7 @@ class ItemCard extends Component {
         this.props.refreshItems()
     }
     componentDidMount() {
-        console.log(this.props.item.description_url)
+        console.log(this.props.item)
     }
     render() {
         return (
@@ -35,7 +35,7 @@ const ItemStyle = styled.div`
     height: 225px;
     width: 225px;
     border: 1px solid black;
-    margin: 5px;
+    margin: 5px 10px;
     padding: 10px;
 `
 const ButtonStyle = styled.button`

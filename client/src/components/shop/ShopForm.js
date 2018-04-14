@@ -46,9 +46,6 @@ const FormStyle = styled.div`
     margin: 50px;
     border: 1px solid black;
     font-size: 25px;
-    img {
-        height: 50%;
-    }
 `
 const InputStyle = styled.input`
     width: 500px;

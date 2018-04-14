@@ -3,6 +3,7 @@ import axios from 'axios'
 import ShopEditForm from './ShopEditForm'
 import ShopDeleteConfirm from './ShopDeleteConfirm'
 import ItemList from '../item/ItemList'
+import styled from 'styled-components'
 
 class ShopView extends Component {
     state = {
@@ -54,7 +55,7 @@ class ShopView extends Component {
         const name = response.data.name
         const cost = response.data.cost.quantity
         const category = response.data.weapon_range
-        const description_url = response.data.properties
+        const description_url = [response.data.properties]
         const payload = { name: name, cost: cost, category: category, description_url: description_url }
         console.log(payload)
         const res = await axios.post(`/api/shops/${this.state.shop.id}/items`, payload)
@@ -62,20 +63,36 @@ class ShopView extends Component {
     }
     render() {
         return (
-            <div>
-                <h1>{this.state.shop.name}</h1>
-                <p>{this.state.shop.description}</p>
-                <img src={this.state.shop.photo_url} />
-                <br />
+            <ShopCard>
+                {this.state.editForm 
+                    ? <ShopEditForm handleChange={this.handleChange} saveShop={this.saveShop} shop={this.state.shop} cancel={this.cancelEdit} /> 
+                    :   <div>
+                            <h1>{this.state.shop.name}</h1>
+                            <p>{this.state.shop.description}</p>
+                            <img src={this.state.shop.photo_url} />
+                            <br />
+                        </div>
+                }
                 <button onClick={this.getNewItem}>new item</button>
                 <button onClick={this.toggleEditForm}>edit shop</button>
                 <button onClick={this.toggleDeleteConfirm}>delete shop</button>
-                {this.state.editForm ? <ShopEditForm handleChange={this.handleChange} saveShop={this.saveShop} shop={this.state.shop} cancel={this.cancelEdit} /> : null}
                 {this.state.deleteConfirm ? <ShopDeleteConfirm deleteShop={this.deleteShop} cancel={this.toggleDeleteConfirm} /> : null}
                 <ItemList shopId={this.props.match.params.id} getShop={this.getShop} refreshItems={this.getShop} shopId={this.props.match.params.id} items={this.state.items} getNewItem={this.getNewItem} />
-            </div>
+            </ShopCard>
         )
     }
 }
 
 export default ShopView
+
+const ShopCard = styled.div`
+    width: 1000px;
+    height: 100%;
+    border: 1px solid black;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    img {
+        width: 100%;
+    }
+`
