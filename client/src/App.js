@@ -10,6 +10,7 @@ injectGlobal`
 @import url('https://fonts.googleapis.com/css?family=Homemade+Apple|Tangerine|Yantramanav|Cinzel');
 
 button {
+  border: 1px solid black;
   padding: 10px;
   font-family: Cinzel;
   font-size: 25px;

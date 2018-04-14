@@ -6,11 +6,11 @@ class NavBar extends Component {
     render() {
         return (
             <NavStyle>
-                <div>
+                <TitleStyle>
                     <p>DUNGEONS & TAVERNS</p>
-                </div>
+                </TitleStyle>
                 <Link to="/shops">
-                    <ButtonStyle>home</ButtonStyle>
+                    <button>home</button>
                 </Link>
             </NavStyle>
         );
@@ -26,9 +26,13 @@ const NavStyle = styled.div`
     font-family: Cinzel;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
+    align-items: center;
+    a {
+        margin-right: 50px;
+    }
 `
-const ButtonStyle = styled.button`
-    margin-top: 18%;
+const TitleStyle = styled.div`
+    margin-left: 50px;
 `

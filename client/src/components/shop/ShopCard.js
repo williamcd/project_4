@@ -33,6 +33,7 @@ const CardStyle = styled.div`
     margin: 10px;
     border: 1px solid black;
     font-size: 25px;
+    border-radius: 5px;
     img {
         margin-bottom: -20px;
         height: 304px;

@@ -14,15 +14,15 @@ class ShopEditForm extends Component {
             <div>
                 <div>
                 <FormStyle onSubmit={this.props.saveShop}>
-                    <input onChange={this.props.handleChange} 
+                    <InputStyle onChange={this.props.handleChange} 
                             placeholder="name" type="text" 
                             name="name" value={this.props.shop.name} />
                     <br />
-                    <input onChange={this.props.handleChange}
+                    <InputStyle onChange={this.props.handleChange}
                             placeholder="description" type="text"
                             name="description" value={this.props.shop.description} />
                     <br />
-                    <input onChange={this.props.handleChange}
+                    <InputStyle onChange={this.props.handleChange}
                             placeholder="photo_url" type="text"
                             name="photo_url" value={this.props.shop.photo_url} />
                     <br />
@@ -48,7 +48,9 @@ const FormStyle = styled.div`
     border: 1px solid black;
     font-size: 25px;
 `
-
 const InputStyle = styled.input`
-    width: 300px;
+    width: 400px;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid black;
 `

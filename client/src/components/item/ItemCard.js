@@ -11,10 +11,10 @@ class ItemCard extends Component {
     render() {
         return (
             <ItemStyle>
+                <ButtonStyle onClick={this.deleteItem}>X</ButtonStyle>
                 <Link to="#">
                     <h3>{this.props.item.name}</h3>
                 </Link>
-                <ButtonStyle onClick={this.deleteItem}>X</ButtonStyle>
                 <p>
                     Cost: {this.props.item.cost}
                     <br />
@@ -29,11 +29,14 @@ class ItemCard extends Component {
 export default ItemCard
 
 const ItemStyle = styled.div`
-    height: 150px;
-    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    width: 200px;
     border: 1px solid black;
     margin: 5px 10px;
-    padding: 15px;
+    border-radius: 5px;
 `
 const ButtonStyle = styled.button`
     padding: 2px;
