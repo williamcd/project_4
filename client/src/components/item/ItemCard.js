@@ -10,8 +10,6 @@ class ItemCard extends Component {
         item: {}
     }
     deleteItem = async () => {
-        console.log(this.state.item.id)
-        console.log(this.props.shopId)
         const response = await axios.delete(`/api/shops/${this.props.shopId}/items/${this.state.item.id}`)
         this.props.getShop()
     }
