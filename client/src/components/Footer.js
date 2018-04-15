@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { Link } from "react-router-dom"
 
 class Footer extends Component {
     render() {
         return (
             <FooterStyle>
-                <h3>About me:</h3>
-                <ul>
-                    <li>GitHub</li>
-                    <li>LinkdIN</li>
-                    <li>Instagram</li>
-                </ul>
+                <img src="https://static1.squarespace.com/static/57ba0049e3df2876f5476403/t/5a0363b1085229909dec2171/1510172785357/linkedin-logo.png" />
+                <img src="https://image.flaticon.com/icons/svg/25/25231.svg" />
+                <img src="https://instagram-brand.com/wp-content/themes/ig-branding/assets/images/ig-logo-email.png" />
             </FooterStyle>
         );
     }
@@ -20,6 +18,13 @@ export default Footer
 
 const FooterStyle = styled.div`
     border: 1px solid black;
+    display: flex;
     background-color: yellow;
+    background-image: url("http://www.niagaracc.suny.edu/i/culinary/backgrounds/woodgrain-footer.jpg");
     height: 150px;
+    align-items: center;
+    img {
+        height: 75%;
+        margin-left: 25px;
+    }
 `

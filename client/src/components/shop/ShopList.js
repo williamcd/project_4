@@ -46,11 +46,13 @@ class ShopList extends Component {
                         )
                     })}
                 </ListDiv>
+                <ButtonDiv>
                 {this.state.showShopForm
                     ?
                     <ShopForm cancel={this.toggleShopForm} handleChange={this.handleChange} createShop={this.createShop} newShop={this.state.newShop} />
                     :
-                    <button onClick={this.toggleShopForm}>new shop</button> }
+                    <button onClick={this.toggleShopForm}>new shop</button>}
+                </ButtonDiv>
             </div>
         )
     }
@@ -62,5 +64,9 @@ const ListDiv = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
+`
+const ButtonDiv = styled.div`
+    display: flex;
     justify-content: space-around;
 `

@@ -13,23 +13,28 @@ class ShopEditForm extends Component {
         return (
             <div>
                 <div>
-                <FormStyle onSubmit={this.props.saveShop}>
-                    <InputStyle onChange={this.props.handleChange} 
-                            placeholder="name" type="text" 
-                            name="name" value={this.props.shop.name} />
-                    <br />
-                    <InputStyle onChange={this.props.handleChange}
+                    <FormStyle onSubmit={this.props.saveShop}>
+                        <InputStyle onChange={this.props.handleChange}
+                            placeholder="name" type="text"
+                            name="name" value={this.props.shop.name}
+                            maxLength="50"
+                            required />
+                        <br />
+                        <InputStyle onChange={this.props.handleChange}
                             placeholder="description" type="text"
-                            name="description" value={this.props.shop.description} />
-                    <br />
-                    <InputStyle onChange={this.props.handleChange}
+                            name="description" value={this.props.shop.description}
+                            maxLength="50"
+                            required />
+                        <br />
+                        <InputStyle onChange={this.props.handleChange}
                             placeholder="photo_url" type="text"
-                            name="photo_url" value={this.props.shop.photo_url} />
-                    <br />
-                    <button onClick={this.props.saveShop}>save</button>
-                    <button onClick={this.props.cancel}>cancel</button>
-                </FormStyle>
-            </div>
+                            name="photo_url" value={this.props.shop.photo_url}
+                            required />
+                        <br />
+                        <SaveButton onClick={this.props.saveShop}>save</SaveButton>
+                        <CancelButton onClick={this.props.cancel}>cancel</CancelButton>
+                    </FormStyle>
+                </div>
             </div>
         )
     }
@@ -53,4 +58,10 @@ const InputStyle = styled.input`
     height: 50px;
     border: none;
     border-bottom: 1px solid black;
+`
+const SaveButton = styled.button`
+    background-color: lightgreen;
+`
+const CancelButton = styled.button`
+    background-color: red;
 `

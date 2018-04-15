@@ -18,17 +18,22 @@ class ShopForm extends Component {
                 <form onSubmit={this.props.createShop}>
                     <InputStyle onChange={this.props.handleChange}
                         placeholder="name" type="text"
-                        name="name" value={this.props.newShop.name} />
+                        name="name" value={this.props.newShop.name}
+                        maxLength="50"
+                        required />
                     <br />
                     <InputStyle onChange={this.props.handleChange}
                         placeholder="photo_url" type="text"
-                        name="photo_url" value={this.props.newShop.photo_url} />
+                        name="photo_url" value={this.props.newShop.photo_url}
+                        required />
                     <br />
                     <InputStyle onChange={this.props.handleChange}
                         placeholder="description" type="text"
-                        name="description" value={this.props.newShop.description} />
+                        name="description" value={this.props.newShop.description}
+                        maxLength="50"
+                        required />
                     <br />
-                    <button>save</button><button onClick={this.props.cancel} >cancel</button>
+                    <SaveButton>save</SaveButton><CancelButton onClick={this.props.cancel} >cancel</CancelButton>
                 </form>
             </FormStyle>
         )
@@ -54,4 +59,10 @@ const InputStyle = styled.input`
     font-size: 25px;
     border: none;
     border-bottom: 1px solid black;
+`
+const SaveButton = styled.button`
+    background-color: lightgreen;
+`
+const CancelButton = styled.button`
+    background-color: red;
 `

@@ -64,9 +64,10 @@ const ItemStyle = styled.div`
     height: 250px;
     width: 250px;
     border: 1px solid black;
-    margin: 5px 10px;
+    margin: 10px 10px;
     border-radius: 5px;
     align-items: center;
+    box-shadow: 10px 10px 15px 1px grey;
 `
 const ButtonStyle = styled.button`
     padding: 2px;
@@ -79,7 +80,7 @@ const ButtonStyle = styled.button`
     transition-duration: 0.25s;
     align-items: center;
     width: 30px;
-    height: 30px;
+    height: 40px;
     button:hover {
     background-color: black;
     color: white;

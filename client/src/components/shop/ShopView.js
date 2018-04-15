@@ -94,6 +94,7 @@ const ShopCard = styled.div`
     text-align: center;
     img {
         width: 100%;
+        border: 4px solid black;
     }
 `
 const ButtonStyle = styled.div`

@@ -22,6 +22,7 @@ export default NavBar
 const NavStyle = styled.div`
     border: 1px solid black;
     background-color: yellow;
+    background-image: url("http://www.niagaracc.suny.edu/i/culinary/backgrounds/woodgrain-footer.jpg");
     font-size: 40px;
     font-family: Cinzel;
     width: 100%;
@@ -34,5 +35,7 @@ const NavStyle = styled.div`
     }
 `
 const TitleStyle = styled.div`
-    margin-left: 50px;
+    margin-left: 25px;
+    font-weight: bold;
+    color: white;
 `

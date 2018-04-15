@@ -25,4 +25,5 @@ const ListStyle = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 50px;
 `

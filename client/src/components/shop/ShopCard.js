@@ -30,10 +30,11 @@ const CardStyle = styled.div`
     text-align: center;
     font-family: Cinzel;
     text-decoration: none;
-    margin: 10px;
+    margin: 50px;
     border: 1px solid black;
     font-size: 25px;
     border-radius: 5px;
+    box-shadow: 10px 10px 15px 1px grey;
     img {
         margin-bottom: -20px;
         height: 304px;
