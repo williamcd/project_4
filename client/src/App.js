@@ -42,8 +42,8 @@ class App extends Component {
           <Footer />
         </div>
       </Router>
-      );
-    }
+    );
   }
-  
-  export default App
+}
+
+export default App

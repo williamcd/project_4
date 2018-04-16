@@ -10,7 +10,7 @@ class ItemCard extends Component {
         item: {}
     }
     deleteItem = async () => {
-        const response = await axios.delete(`/api/shops/${this.props.shopId}/items/${this.state.item.id}`)
+        const response = await axios.delete(`/api/shops/${this.props.shopId}/items/${this.props.item.id}`)
         this.props.getShop()
     }
     edit = () => {
@@ -26,6 +26,7 @@ class ItemCard extends Component {
         const shopId = this.props.shopId
         const itemId = this.state.item.id
         await axios.patch(`/api/shops/${shopId}/items/${itemId}`, this.state.item)
+        await this.props.getShop()
         this.edit()
     }
     componentDidMount() {
