@@ -5,7 +5,10 @@ Welcome to Dungeons & Taverns! With this app, you no longer have to go through t
 
 
 User Stories  :    https://trello.com/b/3846PqF2/project-4
+
 ERD           :    https://imgur.com/BcIdavr
+
 Wire Frame    :    https://imgur.com/rWDiJBQ
+
 Deployed App  :    http://dungeaonsandtaverns.herokuapp.com/shops
 If Heroku loads as https, delete the s ( https > http )
