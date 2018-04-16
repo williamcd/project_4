@@ -38,12 +38,12 @@ class ItemCard extends Component {
                     ? <ItemEditForm item={this.state.item} handleChange={this.handleChange} cancel={this.edit} saveItem={this.saveItem} />
                     : <div>
                         <Link to="#">
-                            <h3>{this.state.item.name}</h3>
+                            <h3>{this.props.item.name}</h3>
                         </Link>
                         <p>
-                            Cost: {this.state.item.cost}
+                            Cost: {this.props.item.cost}
                             <br />
-                            Category: {this.state.item.category}
+                            Category: {this.props.item.category}
                             <br />
                         </p>
                         <EditStyle onClick={this.edit}>edit</EditStyle>
