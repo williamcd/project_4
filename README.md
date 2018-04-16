@@ -10,4 +10,4 @@ Welcome to Dungeons & Taverns! With this app, you no longer have to go through t
     <li>Deployed App  :   http://dungeaonsandtaverns.herokuapp.com/shops</li>
 </ul>
 
-If Heroku loads as https, delete the s ( https > http )
+If Heroku loads as https, delete the s ( https --> http )
