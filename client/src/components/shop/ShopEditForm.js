@@ -54,8 +54,9 @@ const FormStyle = styled.div`
     font-size: 25px;
 `
 const InputStyle = styled.input`
-    width: 400px;
+    width: 90%;
     height: 50px;
+    font-size: 35px;
     border: none;
     border-bottom: 1px solid black;
 `
