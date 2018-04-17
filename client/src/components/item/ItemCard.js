@@ -64,7 +64,7 @@ const ItemStyle = styled.div`
     justify-content: space-around;
     height: 250px;
     width: 250px;
-    border: 1px solid black;
+    border: 1px solid white;
     margin: 10px 10px;
     border-radius: 5px;
     align-items: center;

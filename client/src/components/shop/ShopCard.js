@@ -31,7 +31,7 @@ const CardStyle = styled.div`
     font-family: Cinzel;
     text-decoration: none;
     margin: 50px;
-    border: 1px solid black;
+    border: 1px solid white;
     font-size: 25px;
     border-radius: 5px;
     box-shadow: 10px 10px 15px 1px grey;
