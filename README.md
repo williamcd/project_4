@@ -7,7 +7,7 @@ With this app, you no longer have to go through the trouble of being creative an
     <li>User Stories  :    https://trello.com/b/3846PqF2/project-4</li>
     <li>ERD           :    https://imgur.com/BcIdavr</li>
     <li>Wire Frame    :    https://imgur.com/rWDiJBQ</li>
-    <li>Deployed App  :   http://dungeaonsandtaverns.herokuapp.com/shops</li>
+    <li>Deployed App  :   http://dungeaonsandtaverns.herokuapp.com</li>
 </ul>
 
 If Heroku loads as https, delete the s ( https --> http )
