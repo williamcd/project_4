@@ -9,7 +9,7 @@ class NavBar extends Component {
                 <TitleStyle>
                     <p>DUNGEONS & TAVERNS</p>
                 </TitleStyle>
-                <Link to="/shops">
+                <Link to="/">
                     <button>home</button>
                 </Link>
             </NavStyle>

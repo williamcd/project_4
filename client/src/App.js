@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import LandingPage from './components/LandingPage'
 import ShopList from './components/shop/ShopList'
 import ShopView from './components/shop/ShopView'
 import NavBar from './components/NavBar'
@@ -35,6 +36,7 @@ class App extends Component {
         <div>
           <NavBar />
           <Switch>
+            <Route exact path="/" component={LandingPage} />
             <Route exact path="/shops" component={ShopList} />
             <Route exact path="/shops/:id" component={ShopView} />
             {/* <Route exact path="/shops/:shop_id/items/:id" component={ItemView} /> */}
