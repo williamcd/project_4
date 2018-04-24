@@ -6,6 +6,7 @@ import ShopView from './components/shop/ShopView'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 import { injectGlobal } from 'styled-components'
+import styled from 'styled-components'
 
 injectGlobal`
 @import url('https://fonts.googleapis.com/css?family=Homemade+Apple|Tangerine|Yantramanav|Cinzel');
@@ -33,7 +34,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <EverythingDiv>
           <NavBar />
           <Switch>
             <Route exact path="/" component={LandingPage} />
@@ -42,10 +43,15 @@ class App extends Component {
             {/* <Route exact path="/shops/:shop_id/items/:id" component={ItemView} /> */}
           </Switch>
           <Footer />
-        </div>
+        </EverythingDiv>
       </Router>
     );
   }
 }
 
 export default App
+
+const EverythingDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+`

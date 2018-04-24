@@ -12,6 +12,7 @@ class NavBar extends Component {
                 <Link to="/">
                     <button>home</button>
                 </Link>
+                <a href="https://fathomless-mesa-12165.herokuapp.com/"><button>Back to Portfolio</button></a>
             </NavStyle>
         );
     }
@@ -30,6 +31,7 @@ const NavStyle = styled.div`
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
+    align-self: flex-end;
     a {
         margin-right: 50px;
     }
