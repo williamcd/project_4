@@ -22,7 +22,7 @@ const FooterStyle = styled.div`
     display: flex;
     background-color: yellow;
     background-image: url("http://www.niagaracc.suny.edu/i/culinary/backgrounds/woodgrain-footer.jpg");
-    height: 150px;
+    height: 149px;
     align-items: center;
     img {
         height: 75%;
