@@ -9,10 +9,12 @@ class NavBar extends Component {
                 <TitleStyle>
                     <p>DUNGEONS & TAVERNS</p>
                 </TitleStyle>
-                <Link to="/">
-                    <button>home</button>
-                </Link>
-                <a href="https://fathomless-mesa-12165.herokuapp.com/"><button>Back to Portfolio</button></a>
+                <div>
+                    <Link to="/">
+                        <button>home</button>
+                    </Link>
+                    <a href="https://fathomless-mesa-12165.herokuapp.com/"><button>Back to Portfolio</button></a>
+                </div>
             </NavStyle>
         );
     }
