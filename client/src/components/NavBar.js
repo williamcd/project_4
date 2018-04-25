@@ -12,6 +12,9 @@ class NavBar extends Component {
                 <Link to="/">
                     <button>home</button>
                 </Link>
+                <Link to="/shops">
+                    <button>shops</button>
+                </Link>
             </NavStyle>
         );
     }
