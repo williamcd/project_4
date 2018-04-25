@@ -24,8 +24,7 @@ class ShopForm extends Component {
                     <br />
                     <InputStyle onChange={this.props.handleChange}
                         placeholder="photo_url" type="text"
-                        name="photo_url" value={this.props.newShop.photo_url}
-                        required />
+                        name="photo_url" value={this.props.newShop.photo_url} />
                     <br />
                     <InputStyle onChange={this.props.handleChange}
                         placeholder="description" type="text"
