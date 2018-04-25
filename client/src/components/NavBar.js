@@ -9,12 +9,14 @@ class NavBar extends Component {
                 <TitleStyle>
                     <p>DUNGEONS & TAVERNS</p>
                 </TitleStyle>
-                <Link to="/">
-                    <button>home</button>
-                </Link>
-                <Link to="/shops">
-                    <button>shops</button>
-                </Link>
+                <div>
+                    <Link to="/shops">
+                        <button>shops</button>
+                    </Link>
+                    <Link to="/">
+                        <button>home</button>
+                    </Link>
+                </div>
             </NavStyle>
         );
     }
