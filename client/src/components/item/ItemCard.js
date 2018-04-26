@@ -62,6 +62,7 @@ const ItemStyle = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    background-color: white;
     height: 250px;
     width: 250px;
     border: 1px solid white;
